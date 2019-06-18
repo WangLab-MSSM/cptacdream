@@ -1,3 +1,3 @@
-name = "cptacdream"
+from .cptacdream import *
 
-from .cptacdream import joke
+name = "cptacdream"

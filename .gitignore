@@ -7,4 +7,6 @@ build/
 cptacdream.egg-info/
 dist/
 build_and_publish.sh
+cptacdream/__pycache__/
+
 setup.py
