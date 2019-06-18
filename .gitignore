@@ -6,3 +6,4 @@ venv/
 build/
 cptacdream.egg-info/
 dist/
+build_and_publish.sh
