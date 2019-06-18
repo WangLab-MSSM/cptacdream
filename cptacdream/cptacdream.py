@@ -5,8 +5,9 @@ def hello_world():
     return 'hi'
 
 
-def joke():
-    return 2
+def docker_client():
+    return docker.from_env()
+
 
 # client = docker.from_env()
 # images_local = client.images.list()
