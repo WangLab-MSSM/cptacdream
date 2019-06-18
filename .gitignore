@@ -7,3 +7,4 @@ build/
 cptacdream.egg-info/
 dist/
 build_and_publish.sh
+setup.py
