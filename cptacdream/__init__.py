@@ -1,3 +1,3 @@
 name = "cptacdream"
 
-from .text import joke
+from .cptacdream import joke
