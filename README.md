@@ -20,7 +20,7 @@ For development release:
 ```
 pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.python.org/pypi cptacdream
 ```
-
+Requires Python3
 ## Usage
 ```
 import cptacdream as cd
