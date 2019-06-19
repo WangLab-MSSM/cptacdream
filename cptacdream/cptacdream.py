@@ -1,9 +1,5 @@
 import docker
 
-image_ids = {
-    'cptacdream/sub2:breast': 'sha256:459b4b2cfced521f13bc30de7a613c40a90dabe47b5d0cae95a0160efd33e4bb',
-}
-
 
 def predict_protein_abundances(
         rna,
