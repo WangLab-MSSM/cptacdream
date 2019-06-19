@@ -20,6 +20,7 @@ pip install cptacdream
 ```
 import cptacdream as cd
 
+# Subchallenge 2: predicting protein levels from copy number and transcript levels
 prediction_file, confidence_file = cd.predict_protein_abundances(
         tumor,
         rna,
