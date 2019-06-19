@@ -1,3 +1,3 @@
-from .cptacdream import *
+from .cptacdream import predict_protein_abundances
 
 name = "cptacdream"
