@@ -44,7 +44,7 @@ prediction_file, confidence_file = cd.predict_protein_abundances(
 | output_dir	       |	           |str	          |Absolute file path for output directory. Prediction table and confidence scores will be saved under this directory as prediction.tsv and confidence.tsv
 | logging	       |True	           |bool	          |Print progress to stdout
 
-## Value
+## Return Value
 | Output                 |Type       | Description   |	
 | :------------------------|:-------------|:-------------|
 | prediction.tsv	      |str	          |Path to tab-separated file of predicted protein levels in the shape of genes x samples. This file will be saved in the directory passed to the parameter "output_dir"
