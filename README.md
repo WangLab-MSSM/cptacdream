@@ -47,8 +47,8 @@ prediction_file, confidence_file = cd.predict_protein_abundances(
 ## Return Value
 | Output                 |Type       | Description   |	
 | :------------------------|:-------------|:-------------|
-| prediction.tsv	      |str	          |Path to tab-separated file of predicted protein levels in the shape of genes x samples. This file will be saved in the directory passed to the parameter "output_dir"
-| confidence.tsv	      |str	          |Path to tab-separated file of confidence scores for predictions in the shape of genes x samples. This file will be saved in the directory passed to the parameter "output_dir"
+| prediction_file	      |str	          |Path to tab-separated file of predicted protein levels in the shape of genes x samples. This file will be saved in the directory passed to the parameter "output_dir" as prediction.tsv
+| confidence_file	      |str	          |Path to tab-separated file of confidence scores for predictions in the shape of genes x samples. This file will be saved in the directory passed to the parameter "output_dir" as confidence.tsv
 
 ## Note
 Please ensure that your docker daemon is running in the background.
