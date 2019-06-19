@@ -1,18 +1,61 @@
 import docker
 
-
-def hello_world():
-    return 'hi'
-
-
-def docker_client():
-    return docker.from_env()
+image_ids = {
+    'cptacdream/sub2:breast': 'sha256:459b4b2cfced521f13bc30de7a613c40a90dabe47b5d0cae95a0160efd33e4bb',
+}
 
 
-# client = docker.from_env()
-# images_local = client.images.list()
-# # boop = client.containers.run('alpine', 'echo hello world')
-#
-# # TODO: write check for existing image?
-# client.images.pull('nginx')
-# print(images_local)
+def predict_protein_abundances(
+        rna,
+        dna,
+        output_dir,
+        tumor='breast',
+        logging=True,
+        ):
+
+    image_name = 'cptacdream/sub2:{}'.format(tumor)
+    client = docker.from_env()
+
+    if logging:
+        print("Pulling image. This may take a few minutes...")
+
+    client.images.pull(image_name)
+
+    running_container = client.containers.run(
+        image_name,
+        detach=True,
+        volumes={
+            rna: {
+                'bind': '/rna.txt',
+                'mode': 'rw'
+            },
+            dna: {
+                'bind': '/cna.txt',
+                'mode': 'rw'
+            },
+            output_dir: {
+                'bind': '/output',
+                'mode': 'rw'
+            }
+        }
+    )
+
+    if logging:
+        for line in running_container.logs(stream=True):
+            print(line.strip())
+
+    prediction_output_f = '{}/prediction.tsv'.format(output_dir)
+    confidence_output_f = '{}/confidence.tsv'.format(output_dir)
+
+    return prediction_output_f, confidence_output_f
+
+
+if __name__ == '__main__':
+    _container = predict_protein_abundances(
+        tumor='breast',
+        rna='/Users/anna/Documents/DREAM_Challenge/hongyang_image_files/sub2_breast_CPTAC_breast/rna.txt',
+        dna='/Users/anna/Documents/DREAM_Challenge/hongyang_image_files/sub2_breast_CPTAC_breast/cna.txt',
+        output_dir='/Users/anna/PycharmProjects/cptacdream/tests/output',
+        logging=True
+        )
+    print(_container)
