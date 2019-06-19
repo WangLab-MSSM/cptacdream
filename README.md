@@ -22,7 +22,7 @@ pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://
 ```
 Requires Python3
 ## Usage
-```
+```python
 import cptacdream as cd
 
 # Subchallenge 2: predicting protein levels from copy number and transcript levels
