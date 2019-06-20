@@ -1,4 +1,4 @@
-# cptacdream
+# proteo_estimator
 
 - [Overview](#Overview)
 - [Installation](#installation)
@@ -14,19 +14,20 @@ An in depth analysis revealed associations between the commonly predictive genes
 ## Installation
 For development release:
 ```
-pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.python.org/pypi cptacdream
+pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.python.org/pypi proteo_estimator
 ```
 For production release:
 ```
-pip install cptacdream
+pip install proteo_estimator
 ```
+
 Requires Python3
 ## Usage
 ```python
-import cptacdream as cd
+import proteo_estimator as pr
 
 # Subchallenge 2: predicting protein levels from copy number and transcript levels
-prediction_file, confidence_file = cd.predict_protein_abundances(
+prediction_file = pr.predict_protein_abundances(
         tumor,
         rna,
         cna,
@@ -48,7 +49,6 @@ prediction_file, confidence_file = cd.predict_protein_abundances(
 | Output                 |Type       | Description   |	
 | :------------------------|:-------------|:-------------|
 | prediction_file	      |str	          |Path to tab-separated file of predicted protein levels in the shape of genes x samples. This file will be saved in the directory passed to the parameter "output_dir" as prediction.tsv
-| confidence_file	      |str	          |Path to tab-separated file of confidence scores for predictions in the shape of genes x samples. This file will be saved in the directory passed to the parameter "output_dir" as confidence.tsv
 
 ## Note
 Please ensure that your docker daemon is running in the background.
