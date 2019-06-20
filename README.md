@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # proteo_estimator
+=======
+# cptacdream
+>>>>>>> 1a869bb4224ccac6990cdbd67e07fe485f939dde
 
 - [Overview](#Overview)
 - [Installation](#installation)
@@ -14,11 +18,19 @@ An in depth analysis revealed associations between the commonly predictive genes
 ## Installation
 For development release:
 ```
+<<<<<<< HEAD
 pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.python.org/pypi proteo_estimator
 ```
 For production release:
 ```
 pip install proteo_estimator
+=======
+pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.python.org/pypi cptacdream
+```
+For production release:
+```
+pip install cptacdream
+>>>>>>> 1a869bb4224ccac6990cdbd67e07fe485f939dde
 ```
 Requires Python3
 ## Usage
@@ -48,7 +60,15 @@ prediction_file = pr.predict_protein_abundances(
 | Output                 |Type       | Description   |	
 | :------------------------|:-------------|:-------------|
 | prediction_file	      |str	          |Path to tab-separated file of predicted protein levels in the shape of genes x samples. This file will be saved in the directory passed to the parameter "output_dir" as prediction.tsv
+<<<<<<< HEAD
 
 ## Note
 Please ensure that your docker daemon is running in the background.
 All file paths must be absolute.
+=======
+| confidence_file	      |str	          |Path to tab-separated file of confidence scores for predictions in the shape of genes x samples. This file will be saved in the directory passed to the parameter "output_dir" as confidence.tsv
+
+## Note
+Please ensure that your docker daemon is running in the background.
+All file paths must be absolute.
+>>>>>>> 1a869bb4224ccac6990cdbd67e07fe485f939dde
