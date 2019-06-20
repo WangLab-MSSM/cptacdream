@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # proteo_estimator
-=======
-# cptacdream
->>>>>>> 1a869bb4224ccac6990cdbd67e07fe485f939dde
 
 - [Overview](#Overview)
 - [Installation](#installation)
@@ -18,20 +14,13 @@ An in depth analysis revealed associations between the commonly predictive genes
 ## Installation
 For development release:
 ```
-<<<<<<< HEAD
 pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.python.org/pypi proteo_estimator
 ```
 For production release:
 ```
 pip install proteo_estimator
-=======
-pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.python.org/pypi cptacdream
 ```
-For production release:
-```
-pip install cptacdream
->>>>>>> 1a869bb4224ccac6990cdbd67e07fe485f939dde
-```
+
 Requires Python3
 ## Usage
 ```python
