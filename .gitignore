@@ -4,11 +4,11 @@ venv/
 
 # package build files
 build/
-cptacdream.egg-info/
+*.egg-info/
 dist/
 build_and_publish.sh
-cptacdream/__pycache__/
+*/__pycache__/
 
 setup.py
 
-tests/output
+tests/output*

@@ -1,3 +1,3 @@
 from .cptacdream import predict_protein_abundances
 
-name = "cptacdream"
+name = "proteo_estimator"

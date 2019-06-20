@@ -3,13 +3,14 @@ import docker
 
 def predict_protein_abundances(
         rna,
-        dna,
+        cna,
         output_dir,
         tumor='breast',
         logging=True,
         ):
 
     image_name = 'cptacdream/sub2:{}'.format(tumor)
+    print(image_name)
     client = docker.from_env()
 
     if logging:
@@ -25,7 +26,7 @@ def predict_protein_abundances(
                 'bind': '/rna.txt',
                 'mode': 'rw'
             },
-            dna: {
+            cna: {
                 'bind': '/cna.txt',
                 'mode': 'rw'
             },
@@ -49,8 +50,8 @@ def predict_protein_abundances(
 if __name__ == '__main__':
     _container = predict_protein_abundances(
         tumor='breast',
-        rna='/Users/anna/Documents/DREAM_Challenge/hongyang_image_files/sub2_breast_CPTAC_breast/rna.txt',
-        dna='/Users/anna/Documents/DREAM_Challenge/hongyang_image_files/sub2_breast_CPTAC_breast/cna.txt',
+        rna='/Users/anna/Documents/DREAM_Challenge/hongyang_image_files/sub2_breast_CPTAC_breast/evaluation_data/prospective_breast_RNA_sort_common_gene_15107.txt',
+        cna='/Users/anna/Documents/DREAM_Challenge/hongyang_image_files/sub2_breast_CPTAC_breast/evaluation_data/prospective_breast_CNA_sort_common_gene_16884.txt',
         output_dir='/Users/anna/PycharmProjects/cptacdream/tests/output',
         logging=True
         )
