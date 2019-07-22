@@ -3,7 +3,8 @@
 - [Overview](#Overview)
 - [Installation](#installation)
 - [Usage](#Usage)
-- [Arguments](#Arguments)
+- [predict_protein_abundances](#predict_protein_abundances)
+- [predict_phospho](#predict_phospho)
 - [Value](#Value)
 - [Note](#Note)
 
