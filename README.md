@@ -34,7 +34,7 @@ prediction_file_protein = pr.predict_protein_abundances(
             output_dir,
             logging=True)
             
-# Subchallenge 3: predicting protein levels from copy number and transcript levels
+# Subchallenge 3: predicting phospho levels from protein abundance and transcript levels
 prediction_file_phospho = pr.predict_phospho(
             tumor,
             rna,
